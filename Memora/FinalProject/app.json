@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "MyReminders",
+    "slug": "MyReminders",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "MyReminders needs access to your location to provide location-based reminders.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "MyReminders needs access to your location to provide location-based reminders even when the app is in the background.",
+        "NSLocationAlwaysUsageDescription": "MyReminders needs access to your location to provide location-based reminders even when the app is in the background.",
+        "UIBackgroundModes": ["location", "fetch"]
+      },
+      "bundleIdentifier": "com.myreminders.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ],
+      "package": "com.myreminders.app"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#007AFF"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "MyReminders needs access to your location to provide location-based reminders even when the app is in the background.",
+          "locationAlwaysPermission": "MyReminders needs access to your location to provide location-based reminders even when the app is in the background.",
+          "locationWhenInUsePermission": "MyReminders needs access to your location to provide location-based reminders.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
